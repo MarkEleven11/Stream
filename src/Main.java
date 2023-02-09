@@ -14,6 +14,9 @@ public class Main {
                                        Comparator<? super T> order,
                                        BiConsumer<? super T, ? super T> minMaxConsumer) {
         List<? extends T> list = stream.sorted(order).collect(Collectors.toList());
+        if (list.isEmpty() ||) {
+            System.out.println("Данные отсутствуют. Введите данные");
+        } else
         minMaxConsumer.accept(list.get(0), list.get(list.size()- 1));
     }
 
